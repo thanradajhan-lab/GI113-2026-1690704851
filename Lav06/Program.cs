@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Design;
-using System.Reflection.PortableExecutable;
-
+using System.Reflection;
 namespace Lab06
 {/*
 * Student ID :1690704851
@@ -32,10 +31,6 @@ namespace Lab06
                 {
                     Console.WriteLine("The door open");
                 }
-                else
-                {
-                    Console.WriteLine("The door stays shut");
-                }
                 else if (level >= 10)
                 {
                     Console.WriteLine("Boos floor unlocked");
@@ -44,6 +39,7 @@ namespace Lab06
                 {
                     Console.WriteLine("the door stay shut");
                 }
+
                 bool isPoisoned = true;
 
                 if (isPoisoned == true)
@@ -54,10 +50,11 @@ namespace Lab06
                 {
                     Console.WriteLine("you liver");
                 }
+
                 Console.WriteLine("Your level (1-99):");
                 bool ok = int.TryParse(Console.ReadLine(), out level);
 
-                if (!ok || level < 1 || level > 99) ;
+                if (!ok || level < 1 || level > 99)
                 {
                     Console.WriteLine("Invalid level.");
                 }
@@ -74,12 +71,6 @@ namespace Lab06
                     Console.WriteLine("The door stays shut");
                 }
             }
-
-
-
-
-
-
         }
     }
 }
